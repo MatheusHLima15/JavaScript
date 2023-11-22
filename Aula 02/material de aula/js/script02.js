@@ -11,13 +11,21 @@ break;
         break;
 
         case "*":
-            var resultado= numero1 * numero2;
+            var resultado = numero1 * numero2;
 break;
-            case "/"
-            var resultado= numero1 / numero2;
+            case "/":
+            var resultado = numero1 / numero2;
         break;
       default:
-          alert ("Operador invalido")
-          break
+          alert ("Operador invalido! tente novamente!");
+          location.reload();
+          break;
 
+}
+alert(`O resultado da operação é ${resultado}!`)
+
+var novoCalculo = confirm("Deseja fazer um novo calculo?")
+
+if(novoCalculo == true){
+    location.reload()
 }
