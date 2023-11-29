@@ -1,7 +1,23 @@
+@font-face {
+    font-family: "fonte";
+    src: url(../atividades/fonts/super_comic_3/Super\ Comic.ttf);
+}
+
 *{
 margin: 0%;
 padding: 0%;
 box-sizing: border-box;
+}
+header{
+float: inline-start;
+display: flex;
+flex-direction: initial;
+}
+
+img{
+width: 70px;
+float: inline-start;
+
 }
 
 #page{
@@ -9,13 +25,14 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-color: white;
+color: rgb(0, 0, 0);
 }
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: gray;
+margin: 40px;
+ background-image: url(..//atividades/images/sa_pixar_virtualbg_toystory_16x9_8461039f.jpeg);
+ background-repeat: no-repeat;
+ background-size: cover;
 }
 
 form {
@@ -25,3 +42,33 @@ form {
     width: 600px;
 }
 
+#btnFilme{
+background-color: rgb(0, 195, 255);
+border-radius: 7px;
+border-style: hidden;
+margin-top: 10px;
+}
+
+#btnFilme:hover{
+background-color: rgb(0, 117, 212);
+
+}
+
+h2,label{
+    font-family: "fonte";
+    letter-spacing: 2px;
+
+}
+
+input{
+    height: 35px;
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    border-color: rgb(0, 140, 255);
+    background-color:rgb(177, 177, 177);
+}
+
+ul{
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

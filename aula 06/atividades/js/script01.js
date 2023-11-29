@@ -1,14 +1,77 @@
-class Filme{
-    constructor(nome, descricao, data, diretor,categoria){
-    this.nome = nome;
-    this.descricao = descricao;
-    this.data = data;
-    this.diretor = diretor;
-    this.categoria = categoria;
+document.getElementById('btnFilme').addEventListener('click', function () {
+    cadastrarFilme();
+});
 
-    }
+function cadastrarFilme() {
+    var nome = document.getElementById('nome').value;
+    var descricao = document.getElementById('descricao').value;
+    var data = document.getElementById('data').value;
+    var diretor = document.getElementById('diretor').value;
+    var categoria = document.getElementById('categoria').value;
+
+    var filme = {
+        nome: nome,
+        descricao: descricao,
+        data: data,
+        diretor: diretor,
+        categoria: categoria
+    };
+
+    adicionarFilmeLista(filme);
+
+    document.getElementById('filmeForm').reset();
 }
 
-var btnCarro = document.querySelector("#btnFilme");
+function adicionarFilmeLista(filme) {
+    var listaFilmes = document.getElementById('listaFilmes');
+    var novoItem = document.createElement('li');
+    novoItem.textContent = `Nome: ${filme.nome}, Descrição: ${filme.descricao}, Data de Lançamento: ${filme.data}, Diretor: ${filme.diretor}, Categoria: ${filme.categoria}`;
+    listaFilmes.appendChild(novoItem);
+}
 
-btnCarro.addEventListener('click');    
+// class Filme {
+//     constructor(valNome,valDescricao,valData,valDiretor,valCategoria){
+//         this.nome = valNome;
+//         this.descricao = valDescricao;
+//         this.data = valData;
+//         this.diretor = valDiretor;
+//         this.categoria = valCategoria;
+//     }
+// }
+
+// //SELETORES
+// const btnCadastrar = document.querySelector("#cadastroFilmesBtn");
+// const btnListar = document.querySelector("#listarFilmesBtn");
+// var filmes = []
+
+// btnCadastrar.addEventListener("click", cadastrar);
+// btnListar.addEventListener("click", listar);
+
+// function cadastrar(){
+//     let nomeFilme = document.querySelector("#nomeFilme").value;
+//     let descricaoFilme = document.querySelector("#descricaoFilme").value;
+//     let dataFilme = document.querySelector("#dataFilme").value;
+//     let diretorFilme = document.querySelector("#diretorFilme").value;
+//     let categoriaFilme = document.querySelector("#categoriaFilme").value;
+
+//     filmes.push(new Filme(nomeFilme,descricaoFilme,dataFilme,diretorFilme,categoriaFilme));
+// }
+
+// function listar(){
+//     let divResposta = document.querySelector("#resposta");
+
+//     divResposta.innerHTML = ""
+
+//     filmes.forEach((elemento) => {
+//         divResposta.innerHTML += `<div class="filme">
+//         <h2>${elemento.nome}</h2>
+//         <p>Descrição do filme : ${elemento.descricao}</p>
+//         <p>Data de lançamento : ${elemento.data}</p>
+//         <p>Diretor do filme: ${elemento.diretor}</p>
+//         <p>Categoria do filme : ${elemento.categoria}</p>
+//         </div>
+//         `;
+//     });
+    
+
+// }
